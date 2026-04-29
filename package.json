@@ -1,0 +1,53 @@
+{
+  "name": "n8n-nodes-emailr",
+  "version": "1.3.7",
+  "description": "n8n community nodes for Emailr email infrastructure platform",
+  "author": {
+    "name": "Saeed Mshdi",
+    "email": "saeedmshdi@gmail.com"
+  },
+  "homepage": "https://github.com/emailr-dev/n8n-nodes-emailr",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emailr-dev/n8n-nodes-emailr.git"
+  },
+  "bugs": {
+    "url": "https://github.com/emailr-dev/n8n-nodes-emailr/issues"
+  },
+  "keywords": [
+    "n8n-community-node-package",
+    "n8n",
+    "emailr",
+    "email"
+  ],
+  "license": "MIT",
+  "main": "dist/index.js",
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [
+      "dist/credentials/EmailrApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/Emailr/Emailr.node.js",
+      "dist/nodes/Emailr/EmailrTrigger.node.js"
+    ]
+  },
+  "scripts": {
+    "build": "tsc && cp nodes/Emailr/emailr.png dist/nodes/Emailr/emailr.png",
+    "dev": "tsc --watch",
+    "lint": "npm run typecheck",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "@types/node": "^20.14.10",
+    "n8n-workflow": "^1.0.0",
+    "typescript": "^5.5.3"
+  },
+  "peerDependencies": {
+    "n8n-workflow": "*"
+  }
+}
