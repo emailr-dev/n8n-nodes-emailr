@@ -21,7 +21,7 @@ export class EmailrApi implements ICredentialType {
       required: true,
       placeholder: "et_live_...",
       description:
-        "Your Emailr API key. Starts with et_test_ (development) or et_live_ (production).",
+        "Your domain workspace API key. Select the domain in Emailr before creating the key. Aliases share one workspace connection. Existing account keys remain valid with their migrated workspace access. Starts with et_test_ (development) or et_live_ (production).",
     },
     {
       displayName: "API URL",

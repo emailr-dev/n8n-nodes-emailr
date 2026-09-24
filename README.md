@@ -1,5 +1,16 @@
 # n8n-nodes-emailr
 
+## Domain workspaces
+
+A workspace has a primary domain and optional alias domains. They share contacts,
+templates, audiences, campaigns, sequence steps, inboxes and team access. Separate
+workspaces are isolated; billing remains shared by the parent account. New keys
+are workspace-scoped. Existing keys keep their values and access to the workspaces
+migrated from their account; they do not gain access to future workspaces. Account/domain provisioning and administrative settings use
+the dashboard. See [the workspace compatibility guide](../../docs/domain-workspaces.md)
+for migration and package details.
+
+
 This is an [n8n](https://n8n.io/) community node package for [Emailr](https://emailr.dev).
 
 It provides two nodes:
